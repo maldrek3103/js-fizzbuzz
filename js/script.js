@@ -8,17 +8,19 @@
 // 1. scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
 // 2. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
+var numbers = [];
 
-
-for (var i = 1; i <= 100; i++) {
-    if (i % 3 == 0 && i % 5 == 0) {
-        console.log('FizzBuzz');
-    } else if (i % 3 == 0) {
-        console.log('Fizz');
-    } else if (i % 5 == 0) {
-        console.log('Buzz');
+for (var i = 1; i <= 100; i++) {     // Conteggio da 1 a 100
+    if (i % 3 == 0 && i % 5 == 0) {  // I numeri divisibili per 3 e 5 vengono sostituiti da 'FizzBuzz'
+        numbers.push('FizzBuzz');
+    } else if (i % 3 == 0) {         // I numeri divisibili per 3 vengono sostituiti da 'Fizz'
+        numbers.push('Fizz');
+    } else if (i % 5 == 0) {         // I numeri divisibili per 5 vengono sostituiti da 'Buzz'
+        numbers.push('Buzz');
     } else {
-        console.log(i);
+        numbers.push(i);             // I numeri restanti verranno mostrati per come sono
     }
+
 }
+console.table(numbers);
 
